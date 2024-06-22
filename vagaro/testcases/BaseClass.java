@@ -1,6 +1,7 @@
 package testcases;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.sql.DriverManager;
@@ -8,8 +9,8 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Properties;
-
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -87,7 +88,7 @@ public class BaseClass {
 		if(threadcount<2 || threadcount==0) {
 			System.out.println("If condition" + threadcount);
 		if(dr!=null) {
-		//	StoreCommonData.drivelink()=true;
+	    //	StoreCommonData.drivelink()=true;
 		}
 		else if(browserType.equals("chrome")){
 			WebDriverManager.chromedriver().setup();
@@ -199,7 +200,7 @@ public class BaseClass {
 		if (data.equals("fromEmail") || data.equals("password")) {
 			propertyFileobj = new Properties();
 			try {
-				FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"src/main/java/utilities/configuration.properties");
+				FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"vagaro/utilities/configuration.properties");
 				propertyFileobj.load(objfile);
 				getProperty =propertyFileobj.getProperty(data);
 			} catch (Exception e) {
@@ -208,7 +209,7 @@ public class BaseClass {
 		}
 		else {
 			try {
-				BufferedReader bfr = new BufferedReader(new FileReader(System.getProperty("user.dir")+"src/main/java/utilities/batchFileWithAllDetails.bat"));
+				BufferedReader bfr = new BufferedReader(new FileReader(System.getProperty("user.dir")+"vagaro/utilities/batchFileWithAllDetails.bat"));
 				String line;
 				while((line = bfr.readLine()) !=null) {
 					if(line.contains(data))
@@ -223,9 +224,9 @@ public class BaseClass {
 		return getProperty;
 	}
 	
-	public void logs() {
-	//	logger = Logger.getLogger("TestCucumberFramework");
-	//	PropertyConfigurator.configure("src/main/java/log4j.properties");
+	public void logs() {	
+		logger = Logger.getLogger("TestCucumberFramework");
+  		PropertyConfigurator.configure("vagaro/log4j.properties");
 	}
 	
 	public void quiteDriver() {

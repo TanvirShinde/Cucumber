@@ -12,6 +12,9 @@ public class LoginPage {
 	@FindBy(xpath="abc")
 	private WebElement btn;
 	
-	
+	public void clickonTab() {
+		
+		logintab.click();
+	}
 	
 }

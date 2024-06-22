@@ -20,7 +20,7 @@ import utilities.RunBatchFile;
 
 @CucumberOptions(features= {"classpath:testcases/feature"}, glue= {"testcases.stepdefinition","Hooks"},
 
-   tags = "@us02",
+   tags = "@tanvir",
    plugin = {"pretty","html:target/Destination","json:target/cucumber/cucumber.json"},
    monochrome=true,
    dryRun=false
