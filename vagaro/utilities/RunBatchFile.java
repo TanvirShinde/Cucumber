@@ -11,7 +11,8 @@ public class RunBatchFile {
 		try {
 			//Execute command
 
-			String command = "cmd /c start " + System.getProperty("user.dir")+"\\TestCucumberFramework\\utilities\\beforeExecution.bat";
+		//	String command = "cmd /c start " + System.getProperty("user.dir")+"\\TestCucumberFramework\\utilities\\beforeExecution.bat";
+			String command = "cmd /c start " + System.getProperty("user.dir")+"\\vagaro\\utilities\\beforeExecution.bat";
 
 			Process child =Runtime.getRuntime().exec(command);
 			//Get output stream to write from it
@@ -39,10 +40,14 @@ public class RunBatchFile {
 			String command = "cmd /c start mvn verify -DskipTests";
 			Process child =Runtime.getRuntime().exec(command);
 
-			//Get output stream to write from it
-			OutputStream out = (OutputStream) child.getOutputStream();
+//			//Get output stream to write from it
+//			OutputStream out = (OutputStream) child.getOutputStream();
 
-			out = (OutputStream) child.getOutputStream();
+			
+			//Get output stream to write from it
+			java.io.OutputStream out = child.getOutputStream();
+			
+			out = child.getOutputStream();
 
 			out.write("exit".getBytes());
 

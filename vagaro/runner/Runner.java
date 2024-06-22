@@ -18,7 +18,7 @@ import utilities.RunBatchFile;
 
 
 
-@CucumberOptions(features= {"classpath:testcases/feature"}, glue= {"testcases.stepdefinition","Hooks"},
+@CucumberOptions(features= {"classpath:testcases/login.feature"}, glue= {"testcases.stepdefinition","Hooks"},
 
    tags = "@tanvir",
    plugin = {"pretty","html:target/Destination","json:target/cucumber/cucumber.json"},
