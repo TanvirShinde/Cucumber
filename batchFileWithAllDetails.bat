@@ -1,7 +1,7 @@
 @echo off
 
 :: chrome, edge, firefox, safari
-SET browser=chrome
+SET browser=edge
 
 :: tags with 'and, or,not' conditions
 SET tag=@checkout and @usa and @gc and not @iou and not @class

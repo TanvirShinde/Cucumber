@@ -23,7 +23,6 @@ public abstract class AbstractComponent<T>{
 	}
 
 	public T openPage(Class<T> clazz) {
-
 		T page = null;
 		try {
 			driver =DriverManager.getDriver();

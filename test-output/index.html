@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\HP\AppData\Local\Temp\testng-eclipse--981738605\testng-customsuite.xml</span>
+                    <span>C:\Users\HP\AppData\Local\Temp\testng-eclipse-199418789\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -131,38 +131,9 @@
                   </a> <!-- runScenario("Title of your scenario login", "Login Feature") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Title of your scenario login", "Login Feature")</span>
-                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;I click on tab&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given(&quot;I click on tab&quot;)
-public void i_click_on_tab() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at runner.Runner.runScenario(Runner.java:48)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
-	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pages.GetPageObject.getLoginPage()&quot; because &quot;testcases.stepdefinition.StepDefinition.getPageObject&quot; is null
+	at testcases.stepdefinition.StepDefinition.i_click_on_tab(StepDefinition.java:13)
+	at ✽.I click on tab(classpath:testcases/login.feature:8)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -174,7 +145,7 @@ public void i_click_on_tab() {
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\HP\AppData\Local\Temp\testng-eclipse--981738605\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\HP\AppData\Local\Temp\testng-eclipse-199418789\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -235,12 +206,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.Runner')
-data.setCell(0, 3, 198);
+data.setCell(0, 3, 390);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 198 ms</span>
+              <span class="suite-total-time">Total running time: 390 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -268,18 +239,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.Runner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@32cb636e)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@549621f3)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Title of your scenario login", "Login Feature")</span>
-                <span class="method-start">1119 ms</span>
+                <span class="method-start">1448 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">1332 ms</span>
+                <span class="method-start">1848 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
