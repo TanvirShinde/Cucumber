@@ -9,8 +9,13 @@ import testcases.BaseClass;
 public class StepDefinition extends BaseClass{
  
 	 @Given("^I click on tab$")
-	 public void i_click_on_tab() {
-		 getPageObject.getLoginPage().clickonTab();
+	 public void i_click_on_tab() throws InterruptedException {
+		 getPageObject.getLoginPage().applylogin();
+	 }
+	 
+	 @Given("^I open URL$")
+	 public void i_open_URL() throws Throwable{
+		setUpDrivers();
 	 }
 	 
 }

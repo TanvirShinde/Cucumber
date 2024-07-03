@@ -6,10 +6,10 @@ SET browser=edge
 :: tags with 'and, or,not' conditions
 SET tag=@checkout and @usa and @gc and not @iou and not @class
 SET tcnumber=123456
-SET threadcount=1
+SET threadcount=2
 
 ::dev12
-SET env=https://www.facebook.com/
+SET env=https://practicetestautomation.com/practice-test-login/
 
 ::add multiple emailId with,
 SET toEmailId=emailid

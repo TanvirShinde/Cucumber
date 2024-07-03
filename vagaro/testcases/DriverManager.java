@@ -1,9 +1,10 @@
-package utilities;
+package testcases;
 
 import org.openqa.selenium.WebDriver;
 
 public class DriverManager {
 
+	
 	public static ThreadLocal<WebDriver> dr = new ThreadLocal<WebDriver>();
 	
 	public static WebDriver getDriver () {
@@ -21,4 +22,5 @@ public class DriverManager {
 		dr.get().quit();
 		dr.remove();
 	}
+	
 }

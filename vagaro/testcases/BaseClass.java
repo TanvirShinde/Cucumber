@@ -45,12 +45,13 @@ public class BaseClass {
 	public static int getthreadCount() {
 		String threadCount ="1";
 		try {
+//			BufferedReader bfr = new BufferedReader(
+//					new FileReader(System.getProperty("user.dir")+ "\\batchFileWithAllDetails.bat"));
 			BufferedReader bfr = new BufferedReader(
-					new FileReader(System.getProperty("user.dir")+ "\\batchFileWithAllDetails.bat"));
+					new FileReader(".\\batchFileWithAllDetails.bat"));                     //        BufferedReader bfr = new BufferedReader(new FileReader( ".//batchFileWithAllDetails.bat" ));
 			String line;
 			while ((line = bfr.readLine()) != null) {
-
-				if(line.contains("threadCount"))
+				if(line.contains("threadcount"))
 					threadCount = line.split("=")[1];				 
 			} 
 			bfr.close();
@@ -59,6 +60,7 @@ public class BaseClass {
 		}
 		if(threadCount ==null) {
 			threadCount="1";
+			System.out.println(threadCount);
 		}
 		threadcount =Integer.parseInt(threadCount);
 		return Integer.parseInt(threadCount);
@@ -74,7 +76,8 @@ public class BaseClass {
 		String browserType =null;
 		//Logger.getlogger("Current Thread ID:" + Thread.currentThread().getId());
 		try {
-			BufferedReader bfr =new BufferedReader(new FileReader(System.getProperty("user.dir")+ "\\batchFileWithAllDetails.bat"));
+		//	BufferedReader bfr =new BufferedReader(new FileReader(System.getProperty("user.dir")+ "\\batchFileWithAllDetails.bat"));
+			BufferedReader bfr =new BufferedReader(new FileReader(".\\batchFileWithAllDetails.bat"));
 			String line;
 			while((line = bfr.readLine()) !=null) {
 				if(line.contains("browser"))
@@ -88,13 +91,13 @@ public class BaseClass {
 		if(threadcount<2 || threadcount==0) {
 			System.out.println("If condition" + threadcount);
 		if(dr!=null) {
-	    //	StoreCommonData.drivelink()=true;
+			StoreCommonData.drivelink=true;
 		}
 		else if(browserType.equals("chrome")){
 			WebDriverManager.chromedriver().setup();
 			dr =new ChromeDriver();
 			dr.manage().window().maximize();
-			utilities.DriverManager.setWebDriver(dr);
+			DriverManager.setWebDriver(dr);
 			getPageObject =new GetPageObject();
 			dr.get(getDataFromPropertyFile("env"));
 			dr.manage().deleteAllCookies();
@@ -103,7 +106,7 @@ public class BaseClass {
 			WebDriverManager.firefoxdriver().setup();
 			dr =new FirefoxDriver();
 			dr.manage().window().maximize();
-			utilities.DriverManager.setWebDriver(dr);
+			DriverManager.setWebDriver(dr);
 			getPageObject =new GetPageObject();
 			dr.get(getDataFromPropertyFile("env"));
 			dr.manage().deleteAllCookies();
@@ -112,7 +115,7 @@ public class BaseClass {
 			WebDriverManager.iedriver().setup();
 			dr =new InternetExplorerDriver();
 			dr.manage().window().maximize();
-			utilities.DriverManager.setWebDriver(dr);
+			DriverManager.setWebDriver(dr);
 			getPageObject =new GetPageObject();
 			dr.get(getDataFromPropertyFile("env"));
 			dr.manage().deleteAllCookies();
@@ -121,7 +124,7 @@ public class BaseClass {
 			WebDriverManager.edgedriver().setup();
 			dr =new EdgeDriver();
 			dr.manage().window().maximize();
-			utilities.DriverManager.setWebDriver(dr);
+			DriverManager.setWebDriver(dr);
 			getPageObject =new GetPageObject();
 			dr.get(getDataFromPropertyFile("env"));
 			dr.manage().deleteAllCookies();
@@ -135,7 +138,7 @@ public class BaseClass {
 			capabilities.setCapability(ChromeOptions.CAPABILITY, option);
 			option.merge(capabilities);
 			d=new ChromeDriver(option);
-			utilities.DriverManager.setWebDriver(dr);
+			DriverManager.setWebDriver(dr);
 			getPageObject =new GetPageObject();
 			dr.get(getDataFromPropertyFile("env"));
 		}
@@ -150,33 +153,33 @@ public class BaseClass {
 				capabilities.setCapability(ChromeOptions.CAPABILITY, option);
 				option.merge(capabilities);
 				d=new ChromeDriver(option);
-				utilities.DriverManager.setWebDriver(dr);
+				DriverManager.setWebDriver(d);
 				getPageObject =new GetPageObject();
-				dr.get(getDataFromPropertyFile("env"));
+				d.get(getDataFromPropertyFile("env"));
 			}
 			else if(browserType.equals("firefox")) {
 				WebDriverManager.firefoxdriver().setup();
 				d = new FirefoxDriver();
 				d.manage().window().maximize();
-				utilities.DriverManager.setWebDriver(dr);
+				DriverManager.setWebDriver(d);
 				getPageObject =new GetPageObject();
-				dr.get(getDataFromPropertyFile("env"));
+				d.get(getDataFromPropertyFile("env"));
 			}
 			else if(browserType.equals("IE")) {
 				WebDriverManager.iedriver().setup();
 				d =new InternetExplorerDriver();
 				d.manage().window().maximize();
-				utilities.DriverManager.setWebDriver(dr);
+				DriverManager.setWebDriver(d);
 				getPageObject =new GetPageObject();
-				dr.get(getDataFromPropertyFile("env"));
+				d.get(getDataFromPropertyFile("env"));
 			}
 			else if(browserType.equals("edge")) {
 				WebDriverManager.edgedriver().setup();
 				d =new EdgeDriver();
 				d.manage().window().maximize();
-				utilities.DriverManager.setWebDriver(dr);		
+				DriverManager.setWebDriver(d);		
 				getPageObject =new GetPageObject();
-				dr.get(getDataFromPropertyFile("env"));
+				d.get(getDataFromPropertyFile("env"));
 			}
 			else if(browserType.equals("headless")) {
 				WebDriverManager.chromedriver().setup();
@@ -187,9 +190,9 @@ public class BaseClass {
 				capabilities.setCapability(ChromeOptions.CAPABILITY, option);
 				option.merge(capabilities);
 				d=new ChromeDriver(option);
-				utilities.DriverManager.setWebDriver(dr);
+				DriverManager.setWebDriver(d);
 				getPageObject =new GetPageObject();
-				dr.get(getDataFromPropertyFile("env"));
+				d.get(getDataFromPropertyFile("env"));
 			}
 		}
 	}
@@ -204,12 +207,13 @@ public class BaseClass {
 				propertyFileobj.load(objfile);
 				getProperty =propertyFileobj.getProperty(data);
 			} catch (Exception e) {
-				e.printStackTrace();
+				
 			}
 		}
 		else {
 			try {
-				BufferedReader bfr = new BufferedReader(new FileReader(System.getProperty("user.dir")+"vagaro/utilities/batchFileWithAllDetails.bat"));
+			//	BufferedReader bfr = new BufferedReader(new FileReader(System.getProperty("user.dir")+"vagaro/utilities/batchFileWithAllDetails.bat"));
+				BufferedReader bfr = new BufferedReader(new FileReader( ".//batchFileWithAllDetails.bat" ));
 				String line;
 				while((line = bfr.readLine()) !=null) {
 					if(line.contains(data))
@@ -217,7 +221,7 @@ public class BaseClass {
 				}
 				bfr.close();
 			} catch (Exception e) {
-				// TODO: handle exception
+				e.printStackTrace();
 			}
 		}
 
@@ -230,7 +234,7 @@ public class BaseClass {
 	}
 	
 	public void quiteDriver() {
-	utilities.DriverManager.closeBrowser();
+	testcases.DriverManager.closeBrowser();
 	}
 	
 	protected void openNewTab(DataTable data) {
@@ -257,5 +261,9 @@ public class BaseClass {
 					d.switchTo().window(newWindow);
 			d.get(url.get(0).get(0));
 		}
+	}
+	
+	public void setURL () {
+		DriverManager.getDriver().get(getDataFromPropertyFile("env"));
 	}
 }

@@ -9,7 +9,7 @@ public class RunBatchFile {
 	public static void batchBeforeExecute() {
 		try {
 			//Execute command
-			String command = "cmd /c start " + System.getProperty("user.dir")+"\\vagaro\\utilities\\beforeExecution.bat";
+			String command = "cmd /c start " + ".\\vagaro\\utilities\\beforeExecution.bat";
 			Process child =Runtime.getRuntime().exec(command);
 			//Get output stream to write from it
 			OutputStream out = child.getOutputStream();

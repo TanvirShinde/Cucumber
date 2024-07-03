@@ -9,12 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import utilities.DriverManager;
-
 public abstract class AbstractComponent<T>{
 
 	public WebDriverWait wait;
-	public WebDriver driver;
+	public static WebDriver driver;
 	public Actions actions;
 
 	public AbstractComponent() {

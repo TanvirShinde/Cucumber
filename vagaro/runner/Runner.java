@@ -11,6 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
 import io.cucumber.testng.PickleWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;
+import testcases.BaseClass;
 import utilities.RunBatchFile;
 
 
@@ -35,7 +36,7 @@ public class Runner extends AbstractTestNGCucumberTests {
 	public void setUpClass(ITestContext context) {
 		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
 		int count = 1;
-
+          count = BaseClass.getthreadCount();
 		context.getCurrentXmlTest().getSuite().setThreadCount(8);
 		context.getCurrentXmlTest().getSuite().setDataProviderThreadCount(count);
 		context.getCurrentXmlTest().getSuite().setPreserveOrder(false);
