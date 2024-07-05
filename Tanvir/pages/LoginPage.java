@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
 
 import utilities.AbstractComponent;
 import utilities.BaseClass;
-import utilities.ScrollUpScrollDown;
+
 
 public class LoginPage extends AbstractComponent {
 
@@ -33,10 +33,8 @@ public class LoginPage extends AbstractComponent {
 	public void applylogin() throws InterruptedException {
 		boolean flag =false;
 		Thread.sleep(3000);
-		ScrollUpScrollDown.scrollupEle(input_username);
 		input_username.sendKeys("student");
 		Thread.sleep(3000);
-		ScrollUpScrollDown.scrollupEle(input_pwd);
 		input_pwd.sendKeys("Password123");
 		Thread.sleep(3000);
 		btn_login.click();
@@ -45,9 +43,7 @@ public class LoginPage extends AbstractComponent {
 		if(flag=true)
 			System.out.println("Login successfully done practice automation");
 		Thread.sleep(3000);
-		ScrollUpScrollDown.scrollupEle(btn_logout);
 		btn_logout.click();
-
 	}
 	
 }
