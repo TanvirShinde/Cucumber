@@ -5,9 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import testcases.BaseClass;
+
+import utilities.AbstractComponent;
+import utilities.BaseClass;
 import utilities.ScrollUpScrollDown;
-import testcases.AbstractComponent;
 
 public class LoginPage extends AbstractComponent {
 

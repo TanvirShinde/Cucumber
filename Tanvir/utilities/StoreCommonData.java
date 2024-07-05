@@ -1,4 +1,4 @@
-package testcases;
+package utilities;
 
 public class StoreCommonData {
 	

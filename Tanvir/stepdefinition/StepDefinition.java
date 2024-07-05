@@ -1,10 +1,10 @@
-package testcases.stepdefinition;
+package stepdefinition;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import pages.LoginPage;
-import testcases.AbstractComponent;
-import testcases.BaseClass;
+import utilities.AbstractComponent;
+import utilities.BaseClass;
 
 public class StepDefinition extends BaseClass{
  

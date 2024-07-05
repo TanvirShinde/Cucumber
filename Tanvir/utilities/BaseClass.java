@@ -1,4 +1,4 @@
-package testcases;
+package utilities;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -234,7 +234,7 @@ public class BaseClass {
 	}
 	
 	public void quiteDriver() {
-	testcases.DriverManager.closeBrowser();
+	utilities.DriverManager.closeBrowser();
 	}
 	
 	protected void openNewTab(DataTable data) {

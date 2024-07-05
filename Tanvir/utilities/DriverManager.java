@@ -1,4 +1,4 @@
-package testcases;
+package utilities;
 
 import org.openqa.selenium.WebDriver;
 

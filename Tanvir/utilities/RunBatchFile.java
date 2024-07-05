@@ -24,7 +24,8 @@ public class RunBatchFile {
 
 	public static void batchAfterExecute() {
 		try {
-			//Execute command
+			//Execute command C:\\Windows\\System32\\cmd.exe
+		//	String command = "cmd /c start mvn verify -DskipTests";
 			String command = "cmd /c start mvn verify -DskipTests";
 			Process child =Runtime.getRuntime().exec(command);			
 			//Get output stream to write from it

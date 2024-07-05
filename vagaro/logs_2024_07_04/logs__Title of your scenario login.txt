@@ -1,0 +1,21 @@
+
+
+***************************************************
+Testcase ID : Title of your scenario login
+*************************************************************
+
+LEVEL : SEVERE
+MESSAGE : https://practicetestautomation.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1 - Failed to load resource: net::ERR_HTTP2_PING_FAILED
+
+Time Stamp : 1720109801764
+
+LEVEL : SEVERE
+MESSAGE : https://practicetestautomation.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1 1:0 Uncaught ReferenceError: jQuery is not defined
+
+Time Stamp : 1720109803626
+
+LEVEL : SEVERE
+MESSAGE : https://practicetestautomation.com/wp-content/themes/modern-store-modified/js/build/production.min.js?ver=6.5.5 0:28 Uncaught TypeError: Cannot read properties of undefined (reading 'fn')
+
+Time Stamp : 1720109803630
+

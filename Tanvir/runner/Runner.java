@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
 import io.cucumber.testng.PickleWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;
-import testcases.BaseClass;
+import utilities.BaseClass;
 import utilities.RunBatchFile;
 
 
@@ -19,7 +19,7 @@ import utilities.RunBatchFile;
 
 
 
-@CucumberOptions(features= {"classpath:testcases/login.feature"}, glue= {"testcases.stepdefinition","Hooks"},
+@CucumberOptions(features= {"classpath:testcases"}, glue= {"stepdefinition","Hooks"},
 
    tags = "@tanvir",
    plugin = {"pretty","html:target/Destination","json:target/cucumber/cucumber.json"},

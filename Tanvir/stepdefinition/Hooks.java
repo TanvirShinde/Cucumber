@@ -1,4 +1,4 @@
-package testcases.stepdefinition;
+package stepdefinition;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -10,13 +10,13 @@ import java.io.InputStreamReader;
 
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogType;
-import org.osgi.service.log.LogEntry;
+import org.openqa.selenium.logging.LogEntry;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import testcases.BaseClass;
-import testcases.DriverManager;
+import utilities.BaseClass;
+import utilities.DriverManager;
 
 public class Hooks{
 	String ScenarioSteps="";
@@ -89,7 +89,7 @@ public class Hooks{
 						+ "\nTestcase ID : " + scenario.getName()
 						+"\n*************************************************************\n\n");
 				bfTitle.close();
-				for(org.openqa.selenium.logging.LogEntry entry : browserLogs) {
+				for(LogEntry entry : browserLogs) {
 					try {
 						AddLogInFiles(scenario, entry);
 					} catch (Exception e) {
@@ -107,7 +107,7 @@ public class Hooks{
 			DriverManager.closeBrowser();
 	}
 
-	public void AddLogInFiles(Scenario scenario, org.openqa.selenium.logging.LogEntry entry) {
+	public void AddLogInFiles(Scenario scenario, LogEntry entry) {
 
 		try {
 			FileWriter fw = new FileWriter(myObj.getAbsoluteFile(),true);

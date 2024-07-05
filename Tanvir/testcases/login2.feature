@@ -1,9 +1,9 @@
 #Author: your.email@your.domain.com
 
-@tag @tanvir
+@tag 
 Feature: Login Feature
  
-  @tag1 
+  @tag1 @tanvir
   Scenario: Title of your scenario login
     And I open URL
     And I click on tab
@@ -12,9 +12,3 @@ Feature: Login Feature
   Scenario: Title of your scenario login
     And I open URL
     And I click on tab
-    
-
-    
-    
-
-
