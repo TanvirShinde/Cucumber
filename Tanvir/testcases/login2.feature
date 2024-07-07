@@ -3,7 +3,7 @@
 @tag 
 Feature: Login Feature
  
-  @tag1 @tanvir
+  @tag1 
   Scenario: Title of your scenario login
     And I open URL
     And I click on tab

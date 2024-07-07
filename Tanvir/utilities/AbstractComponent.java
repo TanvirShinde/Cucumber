@@ -325,8 +325,8 @@ public abstract class AbstractComponent<T>{
 				.withTimeout(Duration.ofSeconds(50)).ignoring(NoSuchElementException.class).ignoring(IllegalStateException.class)
 				.ignoring(StaleElementReferenceException.class);
 		try {
-			fluentwait.until(ExpectedConditions.and(ExpectedConditions.invisibilityOfAllElements(ele),driver -> !ele.get(0).isDisplayed()));
-			fluentwait.until(Boolean->(boolean)ele.get(0).getLocation().toString().equals("(0, 0)"));
+			// fluentwait.until(ExpectedConditions.and(ExpectedConditions.invisibilityOfAllElements(ele),driver -> !ele.get(0).isDisplayed()));
+		//	fluentwait.until(Boolean->(boolean)ele.get(0).getLocation().toString().equals("(0, 0)"));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

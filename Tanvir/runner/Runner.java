@@ -36,7 +36,7 @@ public class Runner extends AbstractTestNGCucumberTests {
 	public void setUpClass(ITestContext context) {
 		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
 		int count = 1;
-          count = BaseClass.getthreadCount();
+		count = BaseClass.getthreadCount();
 		context.getCurrentXmlTest().getSuite().setThreadCount(8);
 		context.getCurrentXmlTest().getSuite().setDataProviderThreadCount(count);
 		context.getCurrentXmlTest().getSuite().setPreserveOrder(false);
@@ -51,7 +51,7 @@ public class Runner extends AbstractTestNGCucumberTests {
 	 
 	 @DataProvider(parallel = true)
 	 public Object[] [] scenarios () {
-		 if (testNGCucumberRunner==null) {
+		 if (testNGCucumberRunner == null) {
 			 return new Object [0] [0];
 		 }
 		 return testNGCucumberRunner.provideScenarios();

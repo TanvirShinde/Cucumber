@@ -9,13 +9,13 @@ public class RunBatchFile {
 	public static void batchBeforeExecute() {
 		try {
 			//Execute command
-			String command = "cmd /c start " + ".\\vagaro\\utilities\\beforeExecution.bat";
+			String command = "cmd /c start " + ".\\utilities\\beforeExecution.bat";
 			Process child =Runtime.getRuntime().exec(command);
 			//Get output stream to write from it
 			OutputStream out = child.getOutputStream();
 			out.write("cd C:/ /r/n".getBytes());
 			out.flush();
-			out.write("cd C:/ /r/n".getBytes());
+			out.write("dir C:/ /r/n".getBytes());
 			out.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -24,8 +24,6 @@ public class RunBatchFile {
 
 	public static void batchAfterExecute() {
 		try {
-			//Execute command C:\\Windows\\System32\\cmd.exe
-		//	String command = "cmd /c start mvn verify -DskipTests";
 			String command = "cmd /c start mvn verify -DskipTests";
 			Process child =Runtime.getRuntime().exec(command);			
 			//Get output stream to write from it

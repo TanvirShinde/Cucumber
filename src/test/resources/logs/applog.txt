@@ -1,6 +1,2 @@
 Using msedgedriver 126.0.2592.87 (resolved driver for Edge 126)
-Using msedgedriver 126.0.2592.87 (resolved driver for Edge 126)
-Exporting webdriver.edge.driver as C:\Users\HP\.cache\selenium\msedgedriver\win64\126.0.2592.87\msedgedriver.exe
-Exporting webdriver.edge.driver as C:\Users\HP\.cache\selenium\msedgedriver\win64\126.0.2592.87\msedgedriver.exe
-Using msedgedriver 126.0.2592.87 (resolved driver for Edge 126)
 Exporting webdriver.edge.driver as C:\Users\HP\.cache\selenium\msedgedriver\win64\126.0.2592.87\msedgedriver.exe

@@ -32,11 +32,12 @@ public class LoginPage extends AbstractComponent {
 	
 	public void applylogin() throws InterruptedException {
 		boolean flag =false;
-		Thread.sleep(3000);
+		waitForElementToAppear(input_username);
 		input_username.sendKeys("student");
 		Thread.sleep(3000);
 		input_pwd.sendKeys("Password123");
 		Thread.sleep(3000);
+		scrollelement(btn_login);
 		btn_login.click();
 		if(txt_successtext.isDisplayed())
 			flag=true;

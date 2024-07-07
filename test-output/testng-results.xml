@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-04T21:30:59 IST" name="Default suite" finished-at="2024-07-04T21:31:30 IST" duration-ms="31705">
+  <suite started-at="2024-07-07T11:50:38 IST" name="Default suite" finished-at="2024-07-07T11:51:04 IST" duration-ms="25753">
     <groups>
       <group name="cucumber">
-        <method signature="Runner.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@d6e7bab]" name="runScenario" class="runner.Runner"/>
+        <method signature="Runner.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@59af0466]" name="runScenario" class="runner.Runner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-07-04T21:30:59 IST" name="Default test" finished-at="2024-07-04T21:31:30 IST" duration-ms="31705">
+    <test started-at="2024-07-07T11:50:38 IST" name="Default test" finished-at="2024-07-07T11:51:04 IST" duration-ms="25753">
       <class name="runner.Runner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.Runner@d6e7bab]" started-at="2024-07-04T21:30:59 IST" name="setUpClass" finished-at="2024-07-04T21:31:00 IST" duration-ms="1341" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.Runner@59af0466]" started-at="2024-07-07T11:50:38 IST" name="setUpClass" finished-at="2024-07-07T11:50:40 IST" duration-ms="2427" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7c041b41]]>
+                <![CDATA[org.testng.TestRunner@7859e786]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@d6e7bab]" started-at="2024-07-04T21:31:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-04T21:31:16 IST" duration-ms="15948" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@59af0466]" started-at="2024-07-07T11:50:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-07T11:50:58 IST" duration-ms="17812" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,23 +34,58 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "jk" is null]]>
+              <![CDATA[element not interactable
+  (Session info: MicrosoftEdge=126.0.2592.87)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2ad55a216e609ff6c4bb27a21d2d9f82, sendKeysToElement {id=f.E2696BCEC6188CD443BD75512E630A54.d.A5B1C5F355B9AFB5B1273924B21A4CD5.e.27, value=[Ljava.lang.CharSequence;@2fd56e67}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.87, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59660}, msedge: {msedgedriverVersion: 126.0.2592.87 (883b9421f9ba..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59660/devtoo..., se:cdpVersion: 126.0.2592.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (2ad55a216e609ff6c4bb27a21d2d9f82)] -> xpath: //label[contains(text(),'Username')]]
+Session ID: 2ad55a216e609ff6c4bb27a21d2d9f82]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "jk" is null
-at utilities.ScrollUpScrollDown.scrollupEle(ScrollUpScrollDown.java:18)
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=126.0.2592.87)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2ad55a216e609ff6c4bb27a21d2d9f82, sendKeysToElement {id=f.E2696BCEC6188CD443BD75512E630A54.d.A5B1C5F355B9AFB5B1273924B21A4CD5.e.27, value=[Ljava.lang.CharSequence;@2fd56e67}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.87, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59660}, msedge: {msedgedriverVersion: 126.0.2592.87 (883b9421f9ba..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59660/devtoo..., se:cdpVersion: 126.0.2592.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (2ad55a216e609ff6c4bb27a21d2d9f82)] -> xpath: //label[contains(text(),'Username')]]
+Session ID: 2ad55a216e609ff6c4bb27a21d2d9f82
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy29.sendKeys(Unknown Source)
 at pages.LoginPage.applylogin(LoginPage.java:36)
 at stepdefinition.StepDefinition.i_click_on_tab(StepDefinition.java:13)
 at ✽.I click on tab(classpath:testcases/login.feature:9)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@d6e7bab]" started-at="2024-07-04T21:31:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-04T21:31:16 IST" duration-ms="16206" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@59af0466]" started-at="2024-07-07T11:50:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-07T11:50:58 IST" duration-ms="231" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -63,52 +98,58 @@ at ✽.I click on tab(classpath:testcases/login.feature:9)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "jk" is null]]>
+              <![CDATA[element not interactable
+  (Session info: MicrosoftEdge=126.0.2592.87)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2ad55a216e609ff6c4bb27a21d2d9f82, sendKeysToElement {id=f.E2696BCEC6188CD443BD75512E630A54.d.A5B1C5F355B9AFB5B1273924B21A4CD5.e.27, value=[Ljava.lang.CharSequence;@1efc270b}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.87, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59660}, msedge: {msedgedriverVersion: 126.0.2592.87 (883b9421f9ba..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59660/devtoo..., se:cdpVersion: 126.0.2592.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (2ad55a216e609ff6c4bb27a21d2d9f82)] -> xpath: //label[contains(text(),'Username')]]
+Session ID: 2ad55a216e609ff6c4bb27a21d2d9f82]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "jk" is null
-at utilities.ScrollUpScrollDown.scrollupEle(ScrollUpScrollDown.java:18)
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=126.0.2592.87)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2ad55a216e609ff6c4bb27a21d2d9f82, sendKeysToElement {id=f.E2696BCEC6188CD443BD75512E630A54.d.A5B1C5F355B9AFB5B1273924B21A4CD5.e.27, value=[Ljava.lang.CharSequence;@1efc270b}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.87, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59660}, msedge: {msedgedriverVersion: 126.0.2592.87 (883b9421f9ba..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59660/devtoo..., se:cdpVersion: 126.0.2592.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (2ad55a216e609ff6c4bb27a21d2d9f82)] -> xpath: //label[contains(text(),'Username')]]
+Session ID: 2ad55a216e609ff6c4bb27a21d2d9f82
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy29.sendKeys(Unknown Source)
 at pages.LoginPage.applylogin(LoginPage.java:36)
 at stepdefinition.StepDefinition.i_click_on_tab(StepDefinition.java:13)
 at ✽.I click on tab(classpath:testcases/login.feature:14)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@d6e7bab]" started-at="2024-07-04T21:31:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-04T21:31:25 IST" duration-ms="9156" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Title of your scenario login"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Feature"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "jk" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "jk" is null
-at utilities.ScrollUpScrollDown.scrollupEle(ScrollUpScrollDown.java:18)
-at pages.LoginPage.applylogin(LoginPage.java:36)
-at stepdefinition.StepDefinition.i_click_on_tab(StepDefinition.java:13)
-at ✽.I click on tab(classpath:testcases/login2.feature:9)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.Runner@d6e7bab]" started-at="2024-07-04T21:31:25 IST" name="tearDownClass" finished-at="2024-07-04T21:31:30 IST" duration-ms="5166" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.Runner@59af0466]" started-at="2024-07-07T11:50:58 IST" name="tearDownClass" finished-at="2024-07-07T11:51:04 IST" duration-ms="5189" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -14,6 +14,7 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -33,7 +34,7 @@ public class BaseClass {
 	public WebDriver d;
 	public static WebDriver dr;
 	public static Logger logger;
-	public Properties propertyFileobj;
+	public Properties propertyFileObj;
 	public static GetPageObject getPageObject;
 	public static Hashtable<String, String> data = new Hashtable<String, String>();
 	public static int threadcount;
@@ -45,10 +46,8 @@ public class BaseClass {
 	public static int getthreadCount() {
 		String threadCount ="1";
 		try {
-//			BufferedReader bfr = new BufferedReader(
-//					new FileReader(System.getProperty("user.dir")+ "\\batchFileWithAllDetails.bat"));
 			BufferedReader bfr = new BufferedReader(
-					new FileReader(".\\batchFileWithAllDetails.bat"));                     //        BufferedReader bfr = new BufferedReader(new FileReader( ".//batchFileWithAllDetails.bat" ));
+					new FileReader(".\\batchFileWithAllDetails.bat"));                     
 			String line;
 			while ((line = bfr.readLine()) != null) {
 				if(line.contains("threadcount"))
@@ -74,9 +73,8 @@ public class BaseClass {
 			countNameOfThread=1;
 		Thread.currentThread().setName(String.valueOf(countNameOfThread++));
 		String browserType =null;
-		//Logger.getlogger("Current Thread ID:" + Thread.currentThread().getId());
+		Logger.getLogger("Current Thread ID:" + Thread.currentThread().getId());
 		try {
-		//	BufferedReader bfr =new BufferedReader(new FileReader(System.getProperty("user.dir")+ "\\batchFileWithAllDetails.bat"));
 			BufferedReader bfr =new BufferedReader(new FileReader(".\\batchFileWithAllDetails.bat"));
 			String line;
 			while((line = bfr.readLine()) !=null) {
@@ -93,43 +91,43 @@ public class BaseClass {
 		if(dr!=null) {
 			StoreCommonData.drivelink=true;
 		}
-		else if(browserType.equals("chrome")){
+		else if(browserType.equalsIgnoreCase("chrome")){
 			WebDriverManager.chromedriver().setup();
 			dr =new ChromeDriver();
 			dr.manage().window().maximize();
 			DriverManager.setWebDriver(dr);
-			getPageObject =new GetPageObject();
+			getPageObject = new GetPageObject();
 			dr.get(getDataFromPropertyFile("env"));
 			dr.manage().deleteAllCookies();
 		}
-		else if(browserType.equals("firefox")){
+		else if(browserType.equalsIgnoreCase("firefox")){
 			WebDriverManager.firefoxdriver().setup();
 			dr =new FirefoxDriver();
 			dr.manage().window().maximize();
 			DriverManager.setWebDriver(dr);
-			getPageObject =new GetPageObject();
+			getPageObject = new GetPageObject();
 			dr.get(getDataFromPropertyFile("env"));
 			dr.manage().deleteAllCookies();
 		}
-		else if(browserType.equals("IE")){
+		else if(browserType.equalsIgnoreCase("IE")){
 			WebDriverManager.iedriver().setup();
 			dr =new InternetExplorerDriver();
 			dr.manage().window().maximize();
 			DriverManager.setWebDriver(dr);
-			getPageObject =new GetPageObject();
+			getPageObject = new GetPageObject();
 			dr.get(getDataFromPropertyFile("env"));
 			dr.manage().deleteAllCookies();
 		}
-		else if(browserType.equals("edge")){
+		else if(browserType.equalsIgnoreCase("edge")){
 			WebDriverManager.edgedriver().setup();
 			dr =new EdgeDriver();
 			dr.manage().window().maximize();
 			DriverManager.setWebDriver(dr);
-			getPageObject =new GetPageObject();
+			getPageObject = new GetPageObject();
 			dr.get(getDataFromPropertyFile("env"));
 			dr.manage().deleteAllCookies();
 		}
-		else if(browserType.equals("headless")){
+		else if(browserType.equalsIgnoreCase("headless")){
 			WebDriverManager.chromedriver().setup();
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			ChromeOptions option = new ChromeOptions();
@@ -139,80 +137,95 @@ public class BaseClass {
 			option.merge(capabilities);
 			d=new ChromeDriver(option);
 			DriverManager.setWebDriver(dr);
-			getPageObject =new GetPageObject();
+			getPageObject = new GetPageObject();
 			dr.get(getDataFromPropertyFile("env"));
 		}
 		}
 		else {
-			if(browserType.equals("chrome")) {
+			if(browserType.equalsIgnoreCase("chrome")) {
 				WebDriverManager.chromedriver().setup();
 				DesiredCapabilities capabilities = new DesiredCapabilities();
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("--disable-notifications");
-				option.addArguments("--headless=new","--window-size=1920,1080","--disable-gbu","--ignore-certificate-error","--silent");
-				capabilities.setCapability(ChromeOptions.CAPABILITY, option);
+				option.addArguments("--disable-extensions","--disable-extensions-file-access-check","--disable-extensions-http-throttling","--enable-automation","--disable-infobars");
+				capabilities.setCapability("unhandledPromptBehavior", "accept");
+				capabilities.setCapability("unhandledAlertBehavior", "accept");
+//				option.addArguments("--incongnito");
+//				option.addArguments("--blink-settings=imagesEnabled=false");
+//				capabilities.setCapability(ChromeOptions.CAPABILITY, option);
 				option.merge(capabilities);
 				d=new ChromeDriver(option);
-				DriverManager.setWebDriver(d);
-				getPageObject =new GetPageObject();
-				d.get(getDataFromPropertyFile("env"));
+				d.manage().window().maximize();
+				DriverManager.setWebDriver(dr);
+				getPageObject = new GetPageObject();
+//				logs();
+				dr.get(getDataFromPropertyFile("env"));
+				d.manage().deleteAllCookies();
+//				DevTools chromeDevTools = ((ChromeDriver)d).getDevTools();
+//				this.chromeDevTOOLS.set(((ChromeDriver)d).getDevTools());
 			}
-			else if(browserType.equals("firefox")) {
+			else if(browserType.equalsIgnoreCase("firefox")) {
 				WebDriverManager.firefoxdriver().setup();
 				d = new FirefoxDriver();
 				d.manage().window().maximize();
 				DriverManager.setWebDriver(d);
-				getPageObject =new GetPageObject();
+				getPageObject = new GetPageObject();
 				d.get(getDataFromPropertyFile("env"));
 			}
-			else if(browserType.equals("IE")) {
+			else if(browserType.equalsIgnoreCase("IE")) {
 				WebDriverManager.iedriver().setup();
 				d =new InternetExplorerDriver();
 				d.manage().window().maximize();
 				DriverManager.setWebDriver(d);
-				getPageObject =new GetPageObject();
+				getPageObject = new GetPageObject();
 				d.get(getDataFromPropertyFile("env"));
 			}
-			else if(browserType.equals("edge")) {
+			else if(browserType.equalsIgnoreCase("edge")) {
 				WebDriverManager.edgedriver().setup();
 				d =new EdgeDriver();
 				d.manage().window().maximize();
 				DriverManager.setWebDriver(d);		
-				getPageObject =new GetPageObject();
+				getPageObject = new GetPageObject();
 				d.get(getDataFromPropertyFile("env"));
 			}
-			else if(browserType.equals("headless")) {
+			else if(browserType.equalsIgnoreCase("headless")) {
 				WebDriverManager.chromedriver().setup();
 				DesiredCapabilities capabilities = new DesiredCapabilities();
 				ChromeOptions option = new ChromeOptions();
+				option.addArguments("--disable-extensions","--disable-extensions-file-access-check","--disable-extensions-http-throttling","--enable-automation","--disable-infobars");
 				option.addArguments("--disable-notifications");
-				option.addArguments("--headless=new","--window-size=1920,1080","--disable-gbu","--ignore-certificate-error","--silent");
+            	option.addArguments("--blink-settings=imagesEnabled=false");
+            	option.addArguments("--headless=new","--window-size=1920,1080","--disable-gbu","--ignore-certificate-error","--silent");
+            	capabilities.setCapability("unhandledPromptBehavior", "accept");
+				capabilities.setCapability("unhandledAlertBehavior", "accept");
+				capabilities.setCapability(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, true);
 				capabilities.setCapability(ChromeOptions.CAPABILITY, option);
 				option.merge(capabilities);
 				d=new ChromeDriver(option);
+			//	d=new ChromeDriver(capabilities);
 				DriverManager.setWebDriver(d);
-				getPageObject =new GetPageObject();
+				getPageObject = new GetPageObject();
 				d.get(getDataFromPropertyFile("env"));
+				d.manage().deleteAllCookies();
+			//	this.chromeDevTOOLS.set(((ChromeDriver)d).getDevTools());
 			}
 		}
 	}
 	
 	public String getDataFromPropertyFile(String data) {
 		String getProperty = null;
-
 		if (data.equals("fromEmail") || data.equals("password")) {
-			propertyFileobj = new Properties();
+			propertyFileObj = new Properties();
 			try {
-				FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"vagaro/utilities/configuration.properties");
-				propertyFileobj.load(objfile);
-				getProperty =propertyFileobj.getProperty(data);
+				FileInputStream objfile = new FileInputStream(".//utilities/configuration.properties");
+				propertyFileObj.load(objfile);
+				getProperty = propertyFileObj.getProperty(data);
 			} catch (Exception e) {
-				
+
 			}
 		}
 		else {
 			try {
-			//	BufferedReader bfr = new BufferedReader(new FileReader(System.getProperty("user.dir")+"vagaro/utilities/batchFileWithAllDetails.bat"));
 				BufferedReader bfr = new BufferedReader(new FileReader( ".//batchFileWithAllDetails.bat" ));
 				String line;
 				while((line = bfr.readLine()) !=null) {
@@ -224,13 +237,12 @@ public class BaseClass {
 				e.printStackTrace();
 			}
 		}
-
 		return getProperty;
 	}
 	
 	public void logs() {	
 		logger = Logger.getLogger("TestCucumberFramework");
-  		PropertyConfigurator.configure("vagaro/log4j.properties");
+  		PropertyConfigurator.configure(".//log4j.properties");
 	}
 	
 	public void quiteDriver() {

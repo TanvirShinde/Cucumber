@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 04 21:30:59 IST 2024</td>
+<td>Started on:</td><td>Sun Jul 07 11:50:38 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>31 seconds (31705 ms)</td>
+<tr><td>Total time:</td><td>25 seconds (25753 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,52 +76,144 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Title of your scenario login", "Login Feature"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; because &quot;jk&quot; is null
-	at utilities.ScrollUpScrollDown.scrollupEle(ScrollUpScrollDown.java:18)
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=126.0.2592.87)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2ad55a216e609ff6c4bb27a21d2d9f82, sendKeysToElement {id=f.E2696BCEC6188CD443BD75512E630A54.d.A5B1C5F355B9AFB5B1273924B21A4CD5.e.27, value=[Ljava.lang.CharSequence;@1efc270b}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.87, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59660}, msedge: {msedgedriverVersion: 126.0.2592.87 (883b9421f9ba..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59660/devtoo..., se:cdpVersion: 126.0.2592.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (2ad55a216e609ff6c4bb27a21d2d9f82)] -&gt; xpath: //label[contains(text(),&apos;Username&apos;)]]
+Session ID: 2ad55a216e609ff6c4bb27a21d2d9f82
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.sendKeys(Unknown Source)
 	at pages.LoginPage.applylogin(LoginPage.java:36)
 	at stepdefinition.StepDefinition.i_click_on_tab(StepDefinition.java:13)
 	at ✽.I click on tab(classpath:testcases/login.feature:14)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2030159185", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2030159185'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; because &quot;jk&quot; is null
-	at utilities.ScrollUpScrollDown.scrollupEle(ScrollUpScrollDown.java:18)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2050214585", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2050214585'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=126.0.2592.87)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2ad55a216e609ff6c4bb27a21d2d9f82, sendKeysToElement {id=f.E2696BCEC6188CD443BD75512E630A54.d.A5B1C5F355B9AFB5B1273924B21A4CD5.e.27, value=[Ljava.lang.CharSequence;@1efc270b}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.87, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59660}, msedge: {msedgedriverVersion: 126.0.2592.87 (883b9421f9ba..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59660/devtoo..., se:cdpVersion: 126.0.2592.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (2ad55a216e609ff6c4bb27a21d2d9f82)] -&gt; xpath: //label[contains(text(),&apos;Username&apos;)]]
+Session ID: 2ad55a216e609ff6c4bb27a21d2d9f82
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.sendKeys(Unknown Source)
 	at pages.LoginPage.applylogin(LoginPage.java:36)
 	at stepdefinition.StepDefinition.i_click_on_tab(StepDefinition.java:13)
 	at ✽.I click on tab(classpath:testcases/login.feature:14)
 </pre></div></td>
-<td>16</td>
-<td>runner.Runner@d6e7bab</td></tr>
+<td>0</td>
+<td>runner.Runner@59af0466</td></tr>
 <tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Title of your scenario login", "Login Feature"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; because &quot;jk&quot; is null
-	at utilities.ScrollUpScrollDown.scrollupEle(ScrollUpScrollDown.java:18)
-	at pages.LoginPage.applylogin(LoginPage.java:36)
-	at stepdefinition.StepDefinition.i_click_on_tab(StepDefinition.java:13)
-	at ✽.I click on tab(classpath:testcases/login2.feature:9)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1088709870", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1088709870'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; because &quot;jk&quot; is null
-	at utilities.ScrollUpScrollDown.scrollupEle(ScrollUpScrollDown.java:18)
-	at pages.LoginPage.applylogin(LoginPage.java:36)
-	at stepdefinition.StepDefinition.i_click_on_tab(StepDefinition.java:13)
-	at ✽.I click on tab(classpath:testcases/login2.feature:9)
-</pre></div></td>
-<td>9</td>
-<td>runner.Runner@d6e7bab</td></tr>
-<tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Title of your scenario login", "Login Feature"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; because &quot;jk&quot; is null
-	at utilities.ScrollUpScrollDown.scrollupEle(ScrollUpScrollDown.java:18)
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=126.0.2592.87)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2ad55a216e609ff6c4bb27a21d2d9f82, sendKeysToElement {id=f.E2696BCEC6188CD443BD75512E630A54.d.A5B1C5F355B9AFB5B1273924B21A4CD5.e.27, value=[Ljava.lang.CharSequence;@2fd56e67}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.87, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59660}, msedge: {msedgedriverVersion: 126.0.2592.87 (883b9421f9ba..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59660/devtoo..., se:cdpVersion: 126.0.2592.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (2ad55a216e609ff6c4bb27a21d2d9f82)] -&gt; xpath: //label[contains(text(),&apos;Username&apos;)]]
+Session ID: 2ad55a216e609ff6c4bb27a21d2d9f82
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.sendKeys(Unknown Source)
 	at pages.LoginPage.applylogin(LoginPage.java:36)
 	at stepdefinition.StepDefinition.i_click_on_tab(StepDefinition.java:13)
 	at ✽.I click on tab(classpath:testcases/login.feature:9)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1456167287", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1456167287'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; because &quot;jk&quot; is null
-	at utilities.ScrollUpScrollDown.scrollupEle(ScrollUpScrollDown.java:18)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1889549371", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1889549371'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=126.0.2592.87)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2ad55a216e609ff6c4bb27a21d2d9f82, sendKeysToElement {id=f.E2696BCEC6188CD443BD75512E630A54.d.A5B1C5F355B9AFB5B1273924B21A4CD5.e.27, value=[Ljava.lang.CharSequence;@2fd56e67}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.87, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59660}, msedge: {msedgedriverVersion: 126.0.2592.87 (883b9421f9ba..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59660/devtoo..., se:cdpVersion: 126.0.2592.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (2ad55a216e609ff6c4bb27a21d2d9f82)] -&gt; xpath: //label[contains(text(),&apos;Username&apos;)]]
+Session ID: 2ad55a216e609ff6c4bb27a21d2d9f82
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.sendKeys(Unknown Source)
 	at pages.LoginPage.applylogin(LoginPage.java:36)
 	at stepdefinition.StepDefinition.i_click_on_tab(StepDefinition.java:13)
 	at ✽.I click on tab(classpath:testcases/login.feature:9)
 </pre></div></td>
-<td>15</td>
-<td>runner.Runner@d6e7bab</td></tr>
+<td>17</td>
+<td>runner.Runner@59af0466</td></tr>
 </table><p>
 </body>
 </html>

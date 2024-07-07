@@ -36,7 +36,7 @@ public class Hooks{
 			String path = scenario.getUri().toString().split(":")[1];
 			BufferedReader br = null;
 			try {
-				br = new BufferedReader(new InputStreamReader(new FileInputStream(System.getProperty("user.dir")+"/vagaro/"+path)));
+				br = new BufferedReader(new InputStreamReader(new FileInputStream(".//"+"/Tanvir/"+path)));
 				String line = br.readLine();
 				boolean start = false;
 				while((line=br.readLine()) !=null) {
@@ -74,14 +74,14 @@ public class Hooks{
 			LogEntries browserLogs = DriverManager.getDriver().manage().logs().get(LogType.BROWSER);
 			int i=1;
 			try {
-				new File(System.getProperty("user.dir")+"/vagaro/logs_"+java.time.LocalDate.now().toString().replace("-", "_").replace(" ", "_")).mkdirs();
-				myObj = new File(System.getProperty("user.dir")+"/vagaro/logs_"+java.time.LocalDate.now().toString().replace("-", "_").replace(" ", "_")+"/"+"logs_"+"_"+scenario.getName()+".txt");
+				new File(".//"+"/Tanvir/"+"/logs_"+java.time.LocalDate.now().toString().replace("-", "_").replace(" ", "_")).mkdirs();
+				myObj = new File(".//"+"/Tanvir/"+"/logs_"+java.time.LocalDate.now().toString().replace("-", "_").replace(" ", "_")+"/"+"logs_"+"_"+scenario.getName()+".txt");
 				if(myObj.createNewFile())
 					System.out.println("File created : " + myObj.getName());
 				else {
 					System.out.println("File already exits. ");
 					myObj.delete();
-					myObj = new File(System.getProperty("user.dir")+"/vagaro/logs_"+java.time.LocalDate.now().toString().replace("-", "_").replace(" ", "_")+"/"+"logs_"+"_"+scenario.getName()+".txt");
+					myObj = new File(".//"+"/Tanvir/"+"/logs_"+java.time.LocalDate.now().toString().replace("-", "_").replace(" ", "_")+"/"+"logs_"+"_"+scenario.getName()+".txt");
 				}
 				FileWriter fwTitle = new FileWriter(myObj.getAbsoluteFile(),true);
 				BufferedWriter bfTitle = new BufferedWriter(fwTitle);

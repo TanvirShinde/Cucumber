@@ -113,13 +113,7 @@
       <version>32.1.2-jre</version>
     </dependency>
     
-  <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>32.1.2-jre</version>
-    </dependency>
-    
-    <dependency>
+     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
       <version>2.10.1</version>
@@ -179,20 +173,32 @@
      <version>1.5</version>
     </dependency>
     
+    <!-- https://mvnrepository.com/artifact/com.automation-remarks/video-recorder -->
+  <dependency>
+    <groupId>com.automation-remarks</groupId>
+    <artifactId>video-recorder</artifactId>
+    <version>1.0.2</version>
+  </dependency>
+  
    <dependency>
      <groupId>javax.servlet</groupId>
     <artifactId>javax.servlet-api</artifactId>
      <version>3.1.0</version>
     </dependency>
-  
-      
+    
+    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+  <dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+  </dependency>
+
    <dependency>
      <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
      <version>5.0.9</version>
     </dependency>
-    
-       
+     
    <dependency>
      <groupId>commons-io</groupId>
     <artifactId>commons-io</artifactId>
@@ -229,6 +235,14 @@
      <version>2.0.2</version>
     </dependency>
     
+    <!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
+   <dependency>
+    <groupId>org.uncommons</groupId>
+    <artifactId>reportng</artifactId>
+    <version>1.1.2</version>
+    <scope>test</scope>
+   </dependency>
+   
     <dependency>
      <groupId>com.google.code.guice</groupId>
     <artifactId>guice</artifactId>
@@ -242,6 +256,20 @@
      <version>2.12.2</version>
     </dependency>
     
+    <!-- https://mvnrepository.com/artifact/com.vimalselvam/cucumber-extentsreport -->
+   <dependency>
+    <groupId>com.vimalselvam</groupId>
+    <artifactId>cucumber-extentsreport</artifactId>
+    <version>2.0.2</version>
+   </dependency>
+   
+    <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+  <dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.41.2</version>
+   </dependency>
+
      <dependency>
      <groupId>javax.mail</groupId>
     <artifactId>mail</artifactId>
@@ -327,7 +355,7 @@
     <version>7.7.1</version>
     <scope>test</scope>
  </dependency>
-  
+
  </dependencies>
    
 </project>
